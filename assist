@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Голосовой ассистент для бизнеса</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #f5faff;
+      text-align: center;
+      padding: 30px 20px 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header img.logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 10px 0 5px;
+      color: #003366;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 0 0 20px;
+    }
+
+    .cta-button {
+      background: linear-gradient(to bottom, #3BC5FE, #1E90FF);
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .main-photo {
+      max-width: 300px;
+      display: block;
+      margin: 20px auto 10px;
+    }
+
+    .section {
+      background-color: #fff;
+      padding: 25px 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .highlight {
+      background-color: rgba(0, 46, 95, 0.1);
+      color: #003366;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .section ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .section ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: green;
+      font-weight: bold;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-top: 15px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .cta-button {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .main-photo {
+        max-width: 90%;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/giZWpMe.png" alt="Логотип" class="logo" />
+    <h1>Голосовой ассистент на сайт, который продаёт</h1>
+    <p>Нажмите кнопку — и услышите, как должен звучать клиентский сервис</p>
+    <button class="cta-button">🎤 Говорить с ботом</button>
+  </header>
+
+  <img src="https://i.imgur.com/fsQiE0g.png" alt="Ассистент" class="main-photo" />
+
+  <div class="highlight">
+    🎧 ТОП-1 по качеству голоса — убедитесь сами!<br>
+    Бот говорит естественно, с эмоциями и теплом — с ним приятно общаться, как с живым человеком.
+  </div>
+
+  <div class="section">
+    <h2>🔥 1. Мгновенный контакт (никаких ожиданий)</h2>
+    <ul>
+      <li>❌ Колл-центр: заявка → ожидание → потеря клиента</li>
+      <li>✅ Бот: нажал кнопку — ответ за 1 секунду</li>
+    </ul>
+    <p class="quote">Фишка: Это как «купи сейчас» вместо «мы вам перезвоним».</p>
+  </div>
+
+  <div class="section">
+    <h2>💰 2. Конверсия в 2–3 раза выше</h2>
+    <ul>
+      <li>❌ 100 заявок → 5 продаж через операторов</li>
+      <li>✅ 100 кликов → 15–20 продаж через бота</li>
+    </ul>
+    <p class="quote">Фишка: Клиент уже в диалоге — не нужно уговаривать</p>
+  </div>
+
+  <div class="section">
+    <h2>🤖 3. Работает 24/7 без операторов</h2>
+    <ul>
+      <li>Ответит даже в 3 ночи</li>
+      <li>Без окладов, отпусков и ошибок</li>
+    </ul>
+    <p class="quote">Фишка: Ловишь клиентов, которых конкуренты теряют ночью</p>
+  </div>
+
+  <div class="section">
+    <h2>🎯 4. Персонализация без усилий</h2>
+    <ul>
+      <li>Предлагает то, что клиент реально искал</li>
+      <li>Учитывает историю запросов и поведение</li>
+    </ul>
+    <p class="quote">Фишка: Как продавец с памятью, но без зарплаты</p>
+  </div>
+
+  <div class="section">
+    <h2>📊 5. Полная аналитика</h2>
+    <ul>
+      <li>Записывает все разговоры</li>
+      <li>Собирает статистику по фразам, времени, активности</li>
+    </ul>
+    <p class="quote">Фишка: Ты реально знаешь, что работает</p>
+  </div>
+
+  <div class="section" style="text-align: center;">
+    <h2>Попробуйте прямо сейчас</h2>
+    <p class="quote">Нажмите кнопку — и услышите, как звучит лучший голосовой сервис</p>
+    <button class="cta-button">🎤 Начать диалог</button>
+  </div>
+<!-- 🎤 Элементы для голосового ассистента -->
+<button id="mic-btn" style="display:none;"></button>
+<div id="voice-indicator" style="display:none; position:fixed; bottom:95px; right:34px; width:12px; height:12px; border-radius:50%; background-color:limegreen; animation:pulse 1s infinite ease-in-out;"></div>
+<audio id="audio-player" autoplay></audio>
+
+<div id="lead-form-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:10000; justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:20px 25px; border-radius:10px; width:90%; max-width:400px; position:relative;">
+    <button onclick="closeLeadForm()" style="position:absolute; top:10px; right:15px; font-size:18px; background:none; border:none; cursor:pointer;">✕</button>
+    <h3 style="margin-top:0;">Оставьте заявку</h3>
+    <p style="margin-bottom:10px;">Мы перезвоним вам в ближайшее время</p>
+    <form id="lead-form" onsubmit="submitLead(event)">
+      <input type="text" id="name" name="name" placeholder="Ваше имя" required style="width:100%;padding:10px;margin-bottom:10px;">
+      <input type="tel" id="phone" name="phone" value="+7" required style="width:100%;padding:10px;margin-bottom:15px;" maxlength="12">
+      <button type="submit" style="width:100%;padding:10px;background:#003366;color:#fff;border:none;border-radius:5px;">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const OPENAI_PROXY_URL = "https://openai-gpt-proxy-sdox.onrender.com/gpt";
+  const STREAM_URL = "https://elevenlabs-proxy-c781.onrender.com/stream";
+  const LEAD_URL = "https://openai-gpt-proxy-sdox.onrender.com/lead";
+
+  let userId = localStorage.getItem("userId") || "user_" + Math.random().toString(36).substr(2, 9);
+  localStorage.setItem("userId", userId);
+
+  let messages = [], chatHistory = [], isRunning = false, greeted = false;
+
+  const escapeHTML = str => String(str).replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  const renderChat = () => {}; // можно не отображать чат, если он не нужен
+
+  async function recognizeSpeech(timeout = 10000) {
+    return new Promise((resolve, reject) => {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) return reject("SpeechRecognition не поддерживается");
+      const recognition = new SR();
+      recognition.lang = "ru-RU";
+      recognition.interimResults = false;
+      const timer = setTimeout(() => {
+        recognition.stop();
+        reject("⏱️ Время ожидания истекло");
+      }, timeout);
+      recognition.onresult = event => {
+        clearTimeout(timer);
+        recognition.stop();
+        resolve(event.results[0][0].transcript);
+      };
+      recognition.onerror = err => {
+        clearTimeout(timer);
+        recognition.stop();
+        reject(err.error || "Ошибка распознавания");
+      };
+      recognition.start();
+    });
+  }
+
+  async function askGPT() {
+    if (!messages.length) return "Я вас не расслышала, попробуйте ещё раз.";
+    const res = await fetch(OPENAI_PROXY_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, messages: messages.slice(-10) })
+    });
+    const data = await res.json();
+    if (data.choices?.[0]?.message?.triggerForm) openLeadForm();
+    return data.choices?.[0]?.message?.content || "❌ GPT не ответил";
+  }
+
+  async function playTTS(text) {
+    const indicator = document.getElementById("voice-indicator");
+    indicator.style.display = "block";
+    const res = await fetch(STREAM_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text })
+    });
+    const blob = new Blob([await res.arrayBuffer()], { type: "audio/mpeg" });
+    if (blob.size < 1000) {
+      indicator.style.display = "none";
+      return;
+    }
+    const audio = document.getElementById("audio-player");
+    audio.src = URL.createObjectURL(blob);
+    audio.load();
+    await audio.play().catch(() => {});
+    await new Promise(r => { audio.onended = r; audio.onerror = r; });
+    indicator.style.display = "none";
+  }
+
+  async function dialogLoop() {
+    if (isRunning) return;
+    isRunning = true;
+    try {
+      if (!greeted) {
+        greeted = true;
+        const reply = "Здравствуйте! Я Анна, ваш голосовой консультант. Можете задать вопрос — я помогу разобраться.";
+        chatHistory.push({ role: "assistant", content: reply });
+        await playTTS(reply);
+        await new Promise(r => setTimeout(r, 200));
+      }
+
+      while (true) {
+        await new Promise(r => setTimeout(r, 500));
+        const userText = await recognizeSpeech();
+        if (!userText || userText.trim().length < 1) continue;
+
+        messages.push({ role: "user", content: userText });
+        chatHistory.push({ role: "user", content: userText });
+
+        const reply = await askGPT();
+        messages.push({ role: "assistant", content: reply });
+        chatHistory.push({ role: "assistant", content: reply });
+
+        await playTTS(reply);
+        await new Promise(r => setTimeout(r, 200));
+      }
+    } catch (err) {
+      console.warn("💥 Ошибка:", err);
+    } finally {
+      isRunning = false;
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycbwjw69VW-8l0_Sb-1-vXMVF1gRUeOVpQoxzpVsAuS5ZLWrdu3HPa_CAX8Oq0mHTYBbG/exec", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            user_id: userId,
+            dialog: chatHistory.map(m => `${m.role}: ${m.content}`).join("\n")
+          })
+        });
+      } catch (e) {
+        console.warn("Не удалось сохранить диалог:", e);
+      }
+    }
+  }
+
+  function openLeadForm() {
+    document.getElementById('lead-form-overlay').style.display = 'flex';
+    document.getElementById('lead-form').reset();
+    setTimeout(() => {
+      document.getElementById('name').focus();
+    }, 200);
+  }
+
+  function closeLeadForm() {
+    document.getElementById('lead-form-overlay').style.display = 'none';
+  }
+
+  async function submitLead(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    let rawPhone = document.getElementById("phone").value.replace(/\D/g, "");
+
+    if (rawPhone.startsWith("8")) rawPhone = "7" + rawPhone.slice(1);
+    if (rawPhone.startsWith("9")) rawPhone = "7" + rawPhone;
+
+    if (!/^7\d{10}$/.test(rawPhone)) {
+      alert("Введите корректный номер телефона");
+      return;
+    }
+
+    const phone = "+" + rawPhone;
+    closeLeadForm();
+
+    const res = await fetch(LEAD_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, name, phone })
+    });
+
+    const data = await res.json();
+    const msg = data.message || "Спасибо! Мы свяжемся с вами.";
+    chatHistory.push({ role: "assistant", content: msg });
+    await playTTS(msg);
+  }
+
+  document.querySelectorAll(".cta-button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (!isRunning) {
+        messages = [];
+        chatHistory = [];
+        dialogLoop();
+      }
+    });
+  });
+
+  document.getElementById("phone")?.addEventListener("input", function () {
+    if (!this.value.startsWith("+7")) this.value = "+7";
+    const digits = this.value.slice(2).replace(/\D/g, "").slice(0, 10);
+    this.value = "+7" + digits;
+  });
+</script>
+
+<style>
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+</body>
+</html>
