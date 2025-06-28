@@ -361,15 +361,8 @@
     await playTTS(msg);
   }
 
-  document.querySelectorAll(".cta-button").forEach(btn => {
-  btn.addEventListener("click", async () => {
-    try {
-      await navigator.mediaDevices.getUserMedia({ audio: true }); // 💥 Запрос на микрофон
-    } catch (e) {
-      alert("❌ Нет доступа к микрофону");
-      return;
-    }
-
+ document.querySelectorAll(".cta-button").forEach(btn => {
+  btn.addEventListener("click", () => {
     if (!isRunning) {
       messages = [];
       chatHistory = [];
