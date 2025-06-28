@@ -362,14 +362,21 @@
   }
 
   document.querySelectorAll(".cta-button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (!isRunning) {
-        messages = [];
-        chatHistory = [];
-        dialogLoop();
-      }
-    });
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.mediaDevices.getUserMedia({ audio: true }); // 💥 Запрос на микрофон
+    } catch (e) {
+      alert("❌ Нет доступа к микрофону");
+      return;
+    }
+
+    if (!isRunning) {
+      messages = [];
+      chatHistory = [];
+      dialogLoop();
+    }
   });
+});
 
   document.getElementById("phone")?.addEventListener("input", function () {
     if (!this.value.startsWith("+7")) this.value = "+7";
