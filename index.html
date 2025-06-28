@@ -203,9 +203,10 @@
 </div>
 
 <script>
-  const OPENAI_PROXY_URL = "https://openai-gpt-proxy-sdox.onrender.com/gpt";
-  const STREAM_URL = "https://elevenlabs-proxy-c781.onrender.com/stream";
-  const LEAD_URL = "https://openai-gpt-proxy-sdox.onrender.com/lead";
+  const OPENAI_PROXY_URL = "http://62.171.164.184:3001/gpt";
+  const STREAM_URL = "http://62.171.164.184:3000/stream";
+  const LEAD_URL = "http://62.171.164.184:3001/lead";
+
 
   let userId = localStorage.getItem("userId") || "user_" + Math.random().toString(36).substr(2, 9);
   localStorage.setItem("userId", userId);
