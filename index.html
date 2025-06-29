@@ -212,6 +212,8 @@
 
   let messages = [], chatHistory = [], isRunning = false, greeted = false;
 
+  let audioContext = null; // ← создаём позже, после клика
+
   const escapeHTML = str => String(str).replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
   const renderChat = () => {};
@@ -257,9 +259,11 @@
     const indicator = document.getElementById("voice-indicator");
     indicator.style.display = "block";
 
-    const ws = new WebSocket(STREAM_URL);
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    if (!audioContext) {
+      audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
 
+    const ws = new WebSocket(STREAM_URL);
     ws.binaryType = "arraybuffer";
 
     ws.onmessage = async (event) => {
@@ -289,38 +293,38 @@
   }
 
   async function dialogLoop() {
-  if (isRunning) return;
-  isRunning = true;
-  try {
-    if (!greeted) {
-      greeted = true;
-      const reply = "Здравствуйте! Я Анна, ваш голосовой консультант. Можете задать вопрос — я помогу разобраться.";
-      chatHistory.push({ role: "assistant", content: reply });
-      await playTTS(reply);
-      await new Promise(r => setTimeout(r, 200));
+    if (isRunning) return;
+    isRunning = true;
+    try {
+      if (!greeted) {
+        greeted = true;
+        const reply = "Здравствуйте! Я Анна, ваш голосовой консультант. Можете задать вопрос — я помогу разобраться.";
+        chatHistory.push({ role: "assistant", content: reply });
+        await playTTS(reply);
+        await new Promise(r => setTimeout(r, 200));
+      }
+
+      while (true) {
+        await new Promise(r => setTimeout(r, 500));
+        const userText = await recognizeSpeech();
+        if (!userText || userText.trim().length < 1) continue;
+
+        messages.push({ role: "user", content: userText });
+        chatHistory.push({ role: "user", content: userText });
+
+        const reply = await askGPT();
+        messages.push({ role: "assistant", content: reply });
+        chatHistory.push({ role: "assistant", content: reply });
+
+        await playTTS(reply);
+        await new Promise(r => setTimeout(r, 200));
+      }
+    } catch (err) {
+      console.warn("💥 Ошибка:", err);
+    } finally {
+      isRunning = false;
     }
-
-    while (true) {
-      await new Promise(r => setTimeout(r, 500));
-      const userText = await recognizeSpeech();
-      if (!userText || userText.trim().length < 1) continue;
-
-      messages.push({ role: "user", content: userText });
-      chatHistory.push({ role: "user", content: userText });
-
-      const reply = await askGPT();
-      messages.push({ role: "assistant", content: reply });
-      chatHistory.push({ role: "assistant", content: reply });
-
-      await playTTS(reply);
-      await new Promise(r => setTimeout(r, 200));
-    }
-  } catch (err) {
-    console.warn("💥 Ошибка:", err);
-  } finally {
-    isRunning = false;
   }
-}
 
   function openLeadForm() {
     document.getElementById('lead-form-overlay').style.display = 'flex';
@@ -364,6 +368,9 @@
 
   document.querySelectorAll(".cta-button").forEach(btn => {
     btn.addEventListener("click", () => {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)(); // ← тут создаём по клику
+      }
       if (!isRunning) {
         messages = [];
         chatHistory = [];
